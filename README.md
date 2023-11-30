@@ -1,11 +1,11 @@
 # Projet-DE
 
-<h1>
+<h1 align="center">
   :bar_chart: Un Modèle de Clustering (Kmeans) et Réduction de la dimensionalité via l'ACP, l'AFC et UMAP :bar_chart:
 </h1>
 
 <div align="center">
-  <img src="https://f8n-production.imgix.net/creators/profile/qigfy9rck-ezgif-com-gif-maker-16-gif-dmbjsd.gif" width="800" height="300"/>
+  <img src="https://media.tenor.com/Y7TrrZlEOqsAAAAC/particle-wave.gif" width="800" height="300"/>
 </div>
 
 ---
@@ -19,15 +19,15 @@
 ## Contenu du Repository
 
 - `main.py` : Le fichier principal pour appliquer et évaluer les différentes approches.
-- `Dimensionality Reduction Functions/dimred_umap.py`, `Dimensionality Reduction Functions/dimred_acp.py`, `Dimensionality Reduction Functions/dimred_afc.py` : Les differentes fonctions des méthods de réduction de la dimensionalité.
-- `Clustering Methods/clust.py` : La fonction de Kmeans et la fonction d'évaluation (Normalized Mutual Information et Adjusted Rand Index).
+- `Dimensionality_Reduction_Functions/dimred_umap.py`, `Dimensionality_Reduction_Functions/dimred_acp.py`, `Dimensionality_Reduction_Functions/dimred_afc.py` : Les differentes fonctions des méthods de réduction de la dimensionalité.
+- `Clustering_Methods/clust.py` : La fonction de Kmeans et la fonction d'évaluation (Normalized Mutual Information et Adjusted Rand Index).
 - `notebooks/` : Les différent notbooks utiliser pendant le dévelopement.
 
 ## Instructions pour l'Exécution
 
 1.  Clônez le repository :
 	```bash
-	git clone https://github.com/ehanineAbderraouf/Projet-DE.git
+	git clone https://github.com/LehanineAbderraouf/Projet-DE.git
 	cd Projet-DE
 	```
 
