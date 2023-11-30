@@ -41,9 +41,9 @@
 	python load_model.py
 	```  
 
-4. 	Exécutez le fichier main.py (acp pour ACP, afc pour AFC et umap pour UMPA):
+4. 	Exécutez le fichier main.py (acp pour ACP, afc pour AFC et umap pour UMPA. ainsi que kmeans pour kmeans, ac pour Agglomerative Clustering et kmedoids pour KMedoids):
 	```bash
-	python main.py acp
+	python main.py acp kmeans
 	```
 
 ## Collaborateurs
