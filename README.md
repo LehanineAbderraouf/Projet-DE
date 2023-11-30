@@ -40,7 +40,7 @@
 	```bash
 	python load_model.py
 	```  
-		Le modèle sera sauvgarder dans le dossier model_directory.
+Le modèle sera sauvgarder dans le dossier model_directory.
 
 4. 	Exécutez le fichier main.py (acp pour ACP, afc pour AFC et umap pour UMPA):
 	```bash
