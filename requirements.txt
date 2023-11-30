@@ -1,7 +1,6 @@
-scikit-learn~=1.2.2
-sentence-transformers~=2.2.2
-numpy~=1.23.5
-prince~=0.13.0
-pandas~=1.5.3
-umap-learn~=0.5.5
-scikit-learn-extra==0.3.0
+scikit-learn==1.2.2
+sentence-transformers==2.2.2
+numpy==1.23.5
+prince==0.13.0
+pandas==1.5.3
+umap-learn==0.5.5
