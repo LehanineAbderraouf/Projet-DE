@@ -4,10 +4,10 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 import pandas as pd
 
-from dimred_umap import dimred_umap
-from dimred_acp import dimred_acp
-from dimred_afc import dimred_afc
-from clust import clust_kmeans, evaluate_clusters
+from Dimensionality_Reduction_Functions.dimred_umap import dimred_umap
+from Dimensionality_Reduction_Functions.dimred_acp import dimred_acp
+from Dimensionality_Reduction_Functions.dimred_afc import dimred_afc
+from Clustering_Methods.clust import clust_kmeans, eval_clust
 
 def main():
     if len(sys.argv) != 2:
@@ -28,17 +28,17 @@ def main():
 
     #reduce dimension to 20
     if function_name == "umap":
-        emb_red = umap_function(embeddings, 20)
+        emb_red = dimred_umap(embeddings, 20)
     elif function_name == "acp":
-        emb_red = acp_function(embeddings, 20)
+        emb_red = dimred_acp(embeddings, 20)
     elif function_name == "afc":
-        emb_red = afc_function(embeddings, 20)
+        emb_red = dimred_afc(embeddings, 20)
     else:
         print("Invalid function name. Choose 'umap', 'acp', or 'afc'.")
 
     #apply clustering kmeans algorithm
-    cluster_predictions = clust_kmeans(test_matrix_clust, k)
-    nmi_score, ari_score = evaluate_clusters(cluster_predictions, test_labels)
+    cluster_predictions = clust_kmeans(emb_red, k)
+    nmi_score, ari_score = eval_clust(cluster_predictions, labels)
 
 
     #evaluate the model
