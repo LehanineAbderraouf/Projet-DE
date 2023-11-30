@@ -1,8 +1,6 @@
 import sys
 from sklearn.datasets import fetch_20newsgroups
 from sentence_transformers import SentenceTransformer
-import numpy as np
-import pandas as pd
 
 from Dimensionality_Reduction_Functions.dimred_umap import dimred_umap
 from Dimensionality_Reduction_Functions.dimred_acp import dimred_acp
@@ -23,7 +21,8 @@ def main():
     k = len(set(labels))
 
     # embedding
-    model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+    # Load the model from the saved directory
+    model = SentenceTransformer('model_directory')
     embeddings = model.encode(corpus)
 
     #reduce dimension to 20
