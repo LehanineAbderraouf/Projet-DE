@@ -1,4 +1,5 @@
 from umap import UMAP
+import numpy as np
 
 def dimred_umap(x, n_components):
         '''
