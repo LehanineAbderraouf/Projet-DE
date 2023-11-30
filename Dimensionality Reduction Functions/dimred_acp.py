@@ -7,7 +7,6 @@ def dimred_acp(x, n_components):
 
 	Input:
 	-----
-	    method : ACP or AFC
 	    x : NxM list (numpy array)
 	    n_components : number of dimensions to keep 
 	Output:
