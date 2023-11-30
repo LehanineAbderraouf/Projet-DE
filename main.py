@@ -23,7 +23,8 @@ def main():
     k = len(set(labels))
 
     # embedding
-    model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+    # Load the model from the saved directory
+    model = SentenceTransformer('model_directory')
     embeddings = model.encode(corpus)
 
     #reduce dimension to 20
