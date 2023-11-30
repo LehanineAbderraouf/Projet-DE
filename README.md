@@ -5,7 +5,7 @@
 </h1>
 
 <div align="center">
-  <img src="https://media.tenor.com/Y7TrrZlEOqsAAAAC/particle-wave.gif" width="800" height="300"/>
+  <img src="https://15d.co/wp-content/uploads/2018/04/3loaders.gif" width="900" height="300"/>
 </div>
 
 ---
@@ -14,7 +14,7 @@
 
 - Utiliser des méthods de réduction de la dimensionalité (ACP, AFC et UMAP)
 - Déveloper un modèle de Clustering en utilisant la méthod Kmeans de scikit-learn.
-- Tester le sur le data set 20newsgroups .
+- Tester le sur le data set 20newsgroups et l'évaluer en utilisant NMI et ARI.
 
 ## Contenu du Repository
 
@@ -36,7 +36,13 @@
 	pip install -r requirements.txt
 	```
 
-3. 	Exécutez le fichier main.py (acp pour ACP, afc pour AFC et umap pour UMPA):
+3. 	Télécharger le modèle en local en exécutant le script `load_model.py`.
+	```bash
+	python load_model.py
+	```  
+		Le modèle sera sauvgarder dans le dossier model_directory.
+
+4. 	Exécutez le fichier main.py (acp pour ACP, afc pour AFC et umap pour UMPA):
 	```bash
 	python main.py acp
 	```
