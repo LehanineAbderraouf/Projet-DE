@@ -5,14 +5,15 @@ from sentence_transformers import SentenceTransformer
 from Dimensionality_Reduction_Functions.dimred_umap import dimred_umap
 from Dimensionality_Reduction_Functions.dimred_acp import dimred_acp
 from Dimensionality_Reduction_Functions.dimred_afc import dimred_afc
-from Clustering_Methods.clust import clust_kmeans, eval_clust
+from Clustering_Methods.clust import clust_kmeans, clust_ac, clust_kmedoids, eval_clust
 
 def main():
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         print("Usage: python main.py <function_name>")
         sys.exit(1)
 
     function_name = sys.argv[1].lower()
+    algorithm_name = sys.argv[2].lower()
 
     # import data
     ng20 = fetch_20newsgroups(subset='test')
@@ -36,7 +37,15 @@ def main():
         print("Invalid function name. Choose 'umap', 'acp', or 'afc'.")
 
     #apply clustering kmeans algorithm
-    cluster_predictions = clust_kmeans(emb_red, k)
+    if algorithm_name == "kmeans":
+        cluster_predictions = clust_kmeans(emb_red, k)
+    elif algorithm_name == "ac":
+        cluster_predictions = clust_ac(emb_red, k)
+    elif algorithm_name == "kmedoids":
+        cluster_predictions = clust_kmedoids(emb_red, k)
+    else:
+        print("Invalid algorithm name. Choose 'kmeans', 'ac', or 'kmedoids'.")
+
     nmi_score, ari_score = eval_clust(cluster_predictions, labels)
 
 
