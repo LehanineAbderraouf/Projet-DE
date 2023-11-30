@@ -1,7 +1,7 @@
 # Projet-DE
 
 <h1 align="center">
-  :bar_chart: Un Modèle de Clustering (Kmeans) et Réduction de la dimensionalité via l'ACP, l'AFC et UMAP :bar_chart:
+  :bar_chart: Un Modèle de Clustering et Réduction de la dimensionalité :bar_chart:
 </h1>
 
 <div align="center">
@@ -20,7 +20,7 @@
 
 - `main.py` : Le fichier principal pour appliquer et évaluer les différentes approches.
 - `Dimensionality_Reduction_Functions/dimred_umap.py`, `Dimensionality_Reduction_Functions/dimred_acp.py`, `Dimensionality_Reduction_Functions/dimred_afc.py` : Les differentes fonctions des méthods de réduction de la dimensionalité.
-- `Clustering_Methods/clust.py` : La fonction de Kmeans et la fonction d'évaluation (Normalized Mutual Information et Adjusted Rand Index).
+- `Clustering_Methods/clust.py` : Les fonctions Kmeans, Agglomerative CLustering et Kmedoids ainsi que la fonction d'évaluation (Normalized Mutual Information et Adjusted Rand Index).
 - `notebooks/` : Les différent notbooks utiliser pendant le dévelopement.
 
 ## Instructions pour l'Exécution
@@ -36,11 +36,10 @@
 	pip install -r requirements.txt
 	```
 
-3. 	Télécharger le modèle en local en exécutant le script `load_model.py`.
+3. 	Télécharger le modèle en local en exécutant le script `load_model.py`. Le modèle sera sauvgardé dans le dossier `model_directory`.
 	```bash
 	python load_model.py
 	```  
-Le modèle sera sauvgarder dans le dossier model_directory.
 
 4. 	Exécutez le fichier main.py (acp pour ACP, afc pour AFC et umap pour UMPA):
 	```bash
