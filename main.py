@@ -22,11 +22,9 @@ def main():
     k = len(set(labels))
 
     # embedding
-    # Load the model from the saved directory
-    with open('model.pkl', 'rb') as model_file:
-        model = pickle.load(model_file)
-
-    embeddings = model.encode(corpus)
+    # Load the model from the pickled file
+    with open('embeddings.pkl', 'rb') as embeddings_file:
+        embeddings = pickle.load(embeddings_file)
 
     #reduce dimension to 20
     if function_name == "umap":
