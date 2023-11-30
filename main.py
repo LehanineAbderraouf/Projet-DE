@@ -1,6 +1,6 @@
 import sys
 from sklearn.datasets import fetch_20newsgroups
-from sentence_transformers import SentenceTransformer
+import pickle
 
 from Dimensionality_Reduction_Functions.dimred_umap import dimred_umap
 from Dimensionality_Reduction_Functions.dimred_acp import dimred_acp
@@ -23,7 +23,9 @@ def main():
 
     # embedding
     # Load the model from the saved directory
-    model = SentenceTransformer('model_directory')
+    with open('model.pkl', 'rb') as model_file:
+        model = pickle.load(model_file)
+
     embeddings = model.encode(corpus)
 
     #reduce dimension to 20
